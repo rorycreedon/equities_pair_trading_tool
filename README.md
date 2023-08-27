@@ -15,6 +15,7 @@ On Linux/MacOS
 ```bash
 cd [root_directory]
 git clone https://github.com/rorycreedon/equities_pair_trading_tool
+cd equities_pair_trading_tool
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -23,6 +24,7 @@ On Windows
 ```bash
 cd [root_directory]
 git clone https://github.com/rorycreedon/equities_pair_trading_tool
+cd equities_pair_trading_tool
 python -m venv venv
 venv\Scripts\activate.bat
 pip install -r requirements.txt
