@@ -60,6 +60,10 @@ class DashTable:
         correlations = upper_tri.stack()[upper_tri.stack() > self.pairs_criteria]
 
         self.pairs = correlations.index.values
+        
+        # If asking for more pairs than extracted, limit to the number of pairs extracted
+        if self.pairs.shape[0] < self.num_of_pairs:
+            self.num_of_pairs = self.pairs.shape[0]
 
     @staticmethod
     @jit(nopython=True)
