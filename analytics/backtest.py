@@ -114,8 +114,8 @@ class BackTest:
         effr["EFFR"] = pd.to_numeric(effr["EFFR"], errors="coerce")
         effr["EFFR"] = effr["EFFR"] / (100 * 252)
         effr = effr.loc[self.start_date : self.end_date]
-        # Backfill missing values
-        effr = effr.fillna(method="bfill")
+        # Forward fill missing values
+        effr = effr.fillna(method="ffill")
 
         # Excess returns
         excess_daily_returns = self.daily_returns - effr["EFFR"]
