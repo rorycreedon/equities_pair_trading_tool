@@ -36,7 +36,16 @@ app.layout = html.Div(
         # Header
         html.H1("Equity Pairs Trading Tool"),
         html.H3(
-            "Please select the time range, number of pairs and selection criterion."
+            "1. Select the time range, number of pairs and selection criterion."
+        ),
+        html.H3(
+            "2. Press 'Compute pairs'."
+        ),
+        html.H3(
+            "3. Select a pair to backtest a trading strategy."
+        ),
+        html.H3(
+            "4. Experiment with backtesting parameters."
         ),
         html.H5(
             f"Equities included: individual components (and indices) of the S&P 500, NASDAQ 100, and Russell 2000. Total number of equities included: {len(db_connector.tickers_in_db)}"
